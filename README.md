@@ -1,4 +1,7 @@
 # API YaMDb
+
+### [Workflow status](https://github.com/GhoulNEC/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
+
 ***
 <details>
     <summary style="font-size: 16pt; font-weight: bold">Описание</summary>
