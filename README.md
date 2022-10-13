@@ -1,6 +1,6 @@
 # API YaMDb
 
-### [Workflow status](https://github.com/GhoulNEC/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
+![yamdb_workflow](https://github.com/GhoulNEC/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
 ***
 <details>
