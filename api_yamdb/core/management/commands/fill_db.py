@@ -82,7 +82,7 @@ class Command(BaseCommand):
                 field_name = obj._meta.get_field(item).get_internal_type()
                 type_field = ChekFieldModel.__members__.get(field_name)
                 if type_field is None:
-                    raise Fill_DBException(
+                    raise FillDbError(
                         'Проверьте атрибуты класса ChekFieldModel'
                     )
                 if type_field.value == 'int':
@@ -124,7 +124,7 @@ class Command(BaseCommand):
                 )
         except FileNotFoundError:
             print(f'Файла с путем {file_path} не существует!')
-        except Fill_DBException as err:
+        except FillDbError as err:
             print(err)
         except Exception as err:
             print(f'Возникла ошибка: {err}')
