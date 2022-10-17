@@ -5,8 +5,8 @@ from datetime import datetime
 
 from core.exeptions import Fill_DBException
 from core.utils import ChekFieldModel
-from reviews import models
 from django.core.management.base import BaseCommand
+from reviews import models
 
 from api_yamdb.settings import BASE_DIR
 
@@ -40,12 +40,12 @@ class Command(BaseCommand):
     @classmethod
     def get_csv_file(cls, filename: str) -> str:
         """
-        Сосоставлет путь к файлу.
+        Составляет путь к файлу.
 
         :param filename: Ожидается имя файла
         :return: Выстроенный путь к файлу
         """
-        name_file = filename + '.csv'
+        name_file = f'{filename}.csv'
         path = os.path.join(BASE_DIR, 'static', 'data', name_file)
         return path
 

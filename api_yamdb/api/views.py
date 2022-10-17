@@ -1,26 +1,26 @@
 import uuid
 
+from api.filters import TitleFilter
+from api.paginator import CommentPagination
+from api.permissions import (AuthorAndModeratorReadOnly, IsAdmin,
+                             IsAdminOrReadOnly)
+from api.serializers import (CategoriesSerializer, CommentsSerializer,
+                             GenresSerializer, MeSerializer, ReviewsSerializer,
+                             SignUpSerializer, TitlesSerializer,
+                             TitlesViewSerializer, TokenSerializer,
+                             UserSerializer)
 from django.core.mail import send_mail
-from django.shortcuts import get_object_or_404
-from django.db.models import Avg
 from django.db import IntegrityError
+from django.db.models import Avg
+from django.shortcuts import get_object_or_404
 from rest_framework import filters, status, viewsets
-from rest_framework.decorators import api_view, action
+from rest_framework.decorators import action, api_view
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import AccessToken
-
-from reviews.models import Category, Genre, Title, Review
+from reviews.models import Category, Genre, Review, Title
 from users.models import User
-from api.paginator import CommentPagination
-from api.filters import TitleFilter
-from api.permissions import (AuthorAndModeratorReadOnly,
-                             IsAdminOrReadOnly, IsAdmin)
-from api.serializers import (CategoriesSerializer,
-                             CommentsSerializer, GenresSerializer,
-                             ReviewsSerializer, SignUpSerializer,
-                             TitlesSerializer, TitlesViewSerializer,
-                             TokenSerializer, UserSerializer, MeSerializer)
+
 from .mixins import ReviewGenreModelMixin
 
 
