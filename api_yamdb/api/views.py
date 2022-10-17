@@ -89,6 +89,7 @@ class UserViewSet(viewsets.ModelViewSet):
             serializer.is_valid(raise_exception=True)
             serializer.save(role=user.role)
             return Response(serializer.data, status=status.HTTP_200_OK)
+        return None
 
 
 class TitlesViewSet(viewsets.ModelViewSet):

@@ -1,3 +1,3 @@
-class Fill_DBException(Exception):
+class FillDbError(Exception):
     """Ошибка импорта csv файла в модель."""
     pass

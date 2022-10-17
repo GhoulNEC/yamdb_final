@@ -3,7 +3,7 @@ import inspect
 import os
 from datetime import datetime
 
-from core.exeptions import Fill_DBException
+from core.exeptions import FillDbError
 from core.utils import ChekFieldModel
 from django.core.management.base import BaseCommand
 from reviews import models
@@ -46,8 +46,7 @@ class Command(BaseCommand):
         :return: Выстроенный путь к файлу
         """
         name_file = f'{filename}.csv'
-        path = os.path.join(BASE_DIR, 'static', 'data', name_file)
-        return path
+        return os.path.join(BASE_DIR, 'static', 'data', name_file)
 
     @classmethod
     def get_obj_models(cls, model: str):
