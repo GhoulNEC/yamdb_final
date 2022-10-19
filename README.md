@@ -1,6 +1,8 @@
+![yamdb_workflow](https://github.com/GhoulNEC/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
+
 # API YaMDb
 
-![yamdb_workflow](https://github.com/GhoulNEC/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
+[Ссылка](http://finecut.serveblog.net/) на проект.
 
 ***
 <details>
@@ -81,9 +83,7 @@ docker-compose exec web python manage.py createsuperuser
 docker-compose exec web python manage.py collectstatic --no-input
 ```
 
-Проект будет доступен по [ссылке](http://localhost)
-
-С документацией проекта можно ознакомиться по [ссылке](http://127.0.0.1:8000/redoc/)
+С документацией проекта можно ознакомиться по [ссылке](http://51.250.75.84/redoc/)
 
 </details>
 
