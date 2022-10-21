@@ -2,7 +2,7 @@
 
 # API YaMDb
 
-[Ссылка](http://finecut.serveblog.net/) на проект.
+[Ссылка](51.250.75.84) на проект.
 
 ***
 <details>
